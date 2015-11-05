@@ -22,7 +22,7 @@ sub patch_data {
                 action => 'replace',
                 sub_name => 'dump',
                 code => sub {
-                    if (wantarray) { dmp(@_) } else { dd(@_) }
+                    if (defined wantarray) { dmp(@_) } else { dd(@_) }
                 },
             },
         ],
